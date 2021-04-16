@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\Jezon\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\Jezon\\.nuget\\packages"
+    ]
+  }
+}

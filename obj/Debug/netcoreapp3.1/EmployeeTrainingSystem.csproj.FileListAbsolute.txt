@@ -1,0 +1,13 @@
+C:\Users\Jezon\source\repos\EmployeeTrainingSystem\bin\Debug\netcoreapp3.1\EmployeeTrainingSystem.exe
+C:\Users\Jezon\source\repos\EmployeeTrainingSystem\bin\Debug\netcoreapp3.1\EmployeeTrainingSystem.deps.json
+C:\Users\Jezon\source\repos\EmployeeTrainingSystem\bin\Debug\netcoreapp3.1\EmployeeTrainingSystem.runtimeconfig.json
+C:\Users\Jezon\source\repos\EmployeeTrainingSystem\bin\Debug\netcoreapp3.1\EmployeeTrainingSystem.runtimeconfig.dev.json
+C:\Users\Jezon\source\repos\EmployeeTrainingSystem\bin\Debug\netcoreapp3.1\EmployeeTrainingSystem.dll
+C:\Users\Jezon\source\repos\EmployeeTrainingSystem\bin\Debug\netcoreapp3.1\EmployeeTrainingSystem.pdb
+C:\Users\Jezon\source\repos\EmployeeTrainingSystem\obj\Debug\netcoreapp3.1\EmployeeTrainingSystem.csprojAssemblyReference.cache
+C:\Users\Jezon\source\repos\EmployeeTrainingSystem\obj\Debug\netcoreapp3.1\EmployeeTrainingSystem.AssemblyInfoInputs.cache
+C:\Users\Jezon\source\repos\EmployeeTrainingSystem\obj\Debug\netcoreapp3.1\EmployeeTrainingSystem.AssemblyInfo.cs
+C:\Users\Jezon\source\repos\EmployeeTrainingSystem\obj\Debug\netcoreapp3.1\EmployeeTrainingSystem.csproj.CoreCompileInputs.cache
+C:\Users\Jezon\source\repos\EmployeeTrainingSystem\obj\Debug\netcoreapp3.1\EmployeeTrainingSystem.dll
+C:\Users\Jezon\source\repos\EmployeeTrainingSystem\obj\Debug\netcoreapp3.1\EmployeeTrainingSystem.pdb
+C:\Users\Jezon\source\repos\EmployeeTrainingSystem\obj\Debug\netcoreapp3.1\EmployeeTrainingSystem.genruntimeconfig.cache
