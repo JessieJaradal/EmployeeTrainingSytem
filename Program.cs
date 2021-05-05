@@ -1,182 +1,174 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace EmployeeTrainingSystem
 {
     class Program
     {
-        static void Main(string[] args)
+
+
+        private static List<string> EmployeeMenu = new List<string>()
+         { "'A' to view employee Info",
+           "'B' to view Completed Exercise",
+           "'C' to view Schedule",
+        };
+
+        private static List<string> TrainerMenu = new List<string>()
+        {
+          "'A' to view employee Infos",
+          "'B' to view Completed Exercises ",
+          "'C' to view Schedule",
+        };
+        public static void Main(string[] args)
 
         {
-
             // the trainer username is admin and the password is passoword//
             // the employee user name are julian, jennifer, josh, july and jack.//
 
-            String julian = ("Employee Name: Julian\n Exercise#1: completed\n Exercise#2: completed\n Exercise#3: completed \n Exercise#4: completed\n Exercise#5: completed");
-            String jennifer = ("Employee Name: Jennifer\n Exercise#1: completed\n Exercise#2: completed\n Exercise#3: not completed \n Exercise#4: completed\n Exercise#5: not completed");
-            String josh = ("Employee Name: Josh\n Exercise#1: not completed\n Exercise#2: completed\n Exercise#3: not  completed \n Exercise#4: completed\n Exercise#5: completed");
-            String july = ("Employee Name: July\n Exercise#1: completed\n Exercise#2: completed\n Exercise#3: completed \n Exercise#4: completed\n Exercise#5: not completed");
-            String jack = ("Employee Name: Jack\n Exercise#1: completed\n Exercise#2: completed\n Exercise#3: not completed \n Exercise#4: completed\n Exercise#5: completed");
+            var EmployeesInfo = new[]
+            { "Employee Name: Julian\n Gender: Male \n Age: 20",
+              "Employee Name: Jennifer\n Gender: Male \n Age: 19",
+              "Employee Name: Josh\n Gender: Male \n Age: 18",
+              "Employee Name: July\n Gender: Male \n Age: 20 ",
+              "Employee Name: Jack\n Gender: Male \n Age: 23"};
+
+            var JulianExercises = new[] { "Exercise#1: completed", "Exercise#2: completed", "Exercise#3: completed", "Exercise#4: completed", "Exercise#5: completed" };
+            var JenniferExercises = new[] { "Exercise#1: completed", "Exercise#2: completed", "Exercise#3: completed", "Exercise#4: completed", "Exercise#5: not completed" };
+            var JoshExercises = new[] { "Exercise#1: not completed", "Exercise#2: completed", "Exercise#3: completed", "Exercise#4: completed", "Exercise#5: completed" };
+            var JulyExercises = new[] { "Exercise#1: completed", "Exercise#2: completed", "Exercise#3: not completed", "Exercise#4: completed", "Exercise#5: completed" };
+            var JackExercises = new[] { "Exercise#1: completed", "Exercise#2: not completed", "Exercise#3: completed", "Exercise#4: completed", "Exercise#5: completed" };
+            var CompletedExercise = new[] { "" };
 
             String employeemenu = "Welcome to the Employee Menu: Press A to view the Completed Exercise or Press B to view the Training Schedule";
             String adminmenu = "Welcome to the Admin Menu: Press A to view Employee's Status Press B to view the Training Schedule";
-            String schedule = ("Training Schedule:\n exercise#1: April 1,2021\n Exercise#2: April 7,2021\n Exercise#3: April 14,2021\n Exercise#4: April 21,2021\n Exercise#5: April 28,2021");
+            var schedule = new[] { "exercise#1: April 1,2021", "Exercise#2: April 7,2021", "Exercise#3: April 14,2021", "Exercise#3: April 14,2021", "Exercise#5: April 28,2021" };
 
             Console.WriteLine("Welcome to Jessie's Employee Traing System.");
-            Console.WriteLine("..........");
-            Console.WriteLine("If you are a Trainer Press A and Press B If you are a employee.");
+            Console.WriteLine("----------------------------------------------------------");
+            Console.WriteLine("PRESS A to Access Trainer Menu and Press B to access Employee Menu");
             String letter = Console.ReadLine().ToUpper();
 
 
             if (letter.Equals("A"))
             {
 
-                Console.WriteLine(".........");
-                Console.WriteLine("Welcome Trainer: Please Input your Username:");
-                String username = Console.ReadLine();
+                ShowTrainerMenu();
+                Console.WriteLine("----------------------------------------------------------");
+                String UserInput = Console.ReadLine().ToUpper();
 
-                if (username.Equals("admin"))
+                if (UserInput.Equals("A"))
                 {
-                    Console.WriteLine("Please Input your password:");
-                    String password = Console.ReadLine();
 
-                    if (password.Equals("password"))
-                    {
+                    foreach (var title in EmployeesInfo) { Console.WriteLine($"Employees Info< {title}"); }
 
-                        Console.WriteLine(adminmenu);
-                        String admselection = Console.ReadLine().ToUpper();
+                    Console.WriteLine("Press any key to exit.");
+                    Console.ReadKey();
+                }
+                else if (UserInput.Equals("C"))
+                {
 
-                        if (admselection.Equals("A"))
-                        {
+                    foreach (var title in schedule) { Console.WriteLine($"Employees Schedule: {title}"); }
+                    Console.WriteLine("Press any key to exit.");
+                    Console.ReadKey();
 
-                            Console.WriteLine("Employee Status");
-                            Console.WriteLine(".......");
-                            Console.WriteLine(julian);
-                            Console.WriteLine(".......");
-                            Console.WriteLine(jennifer);
-                            Console.WriteLine(".......");
-                            Console.WriteLine(josh);
-                            Console.WriteLine(".......");
-                            Console.WriteLine(july);
-                            Console.WriteLine(".......");
-                            Console.WriteLine(jack);
-                            Console.WriteLine("Press any key to exit.");
-                            Console.ReadKey();
-                        }
-                        else if (admselection.Equals("B"))
-                        {
+                }
+                else if (UserInput.Equals("B"))
+                {
+                    Console.WriteLine(EmployeesInfo[0]);
+                    Console.WriteLine(JulianExercises[0]);
+                    Console.WriteLine(EmployeesInfo[1]);
+                    Console.WriteLine(JenniferExercises[1]);
+                    Console.WriteLine(EmployeesInfo[2]);
+                    Console.WriteLine(JoshExercises[0]);
+                    Console.WriteLine(EmployeesInfo[3]);
+                    Console.WriteLine(JulyExercises[0]);
+                    Console.WriteLine(EmployeesInfo[4]);
+                    Console.WriteLine(JackExercises[0]);
 
-                            Console.WriteLine(schedule);
-                            Console.WriteLine("Press any key to exit.");
-                            Console.ReadKey();
-
-                        }
-
-                        else
-                        {
-
-                            Console.WriteLine("Invalid Input!");
-                            Console.WriteLine("Press any key to exit.");
-                            Console.ReadKey();
-                        }
-
-
-                    }
-                    else
-                    {
-
-                        Console.WriteLine("Invalid Password!");
-                        Console.WriteLine("Press any key to exit.");
-                        Console.ReadKey();
-                    }
+                    Console.WriteLine("Press any key to exit.");
+                    Console.ReadKey();
 
                 }
 
                 else
                 {
 
-
-                    Console.WriteLine("Invalid username!.");
+                    Console.WriteLine("Invalid Input!");
                     Console.WriteLine("Press any key to exit.");
                     Console.ReadKey();
                 }
 
-            }
-           
 
-            if (letter.Equals("B"))
+
+            }
+
+            else if (letter.Equals("B"))
             {
 
-                Console.WriteLine(".........");
-                Console.WriteLine(employeemenu);
-                
-                Console.WriteLine("Please choose a key:");
-                String empselection = Console.ReadLine().ToLower();
+                ShowEmployeeMenu();
+                Console.WriteLine("----------------------------------------------------------");
+                String UserInput1 = Console.ReadLine().ToUpper();
 
-                   if (empselection.Equals("a"))               
-                   {
-                    Console.WriteLine(".......");
-                    Console.WriteLine("Please Input the username:");
-                    String empselection2 = Console.ReadLine().ToLower();
 
-                    if (empselection2.Equals("julian"))
-                    {
-                        Console.WriteLine(julian);
-                        Console.WriteLine("Press any key to exit.");
-                        Console.ReadKey();
-                    }
-                    else if (empselection2.Equals("jennifer"))
-                    {
-                        Console.WriteLine(jennifer);
-                        Console.WriteLine("Press any key to exit.");
-                        Console.ReadKey();
-                    }                  
-                    else if (empselection2.Equals("josh"))
-                    {
-                        Console.WriteLine(josh);
-                        Console.WriteLine("Press any key to exit.");
-                        Console.ReadKey();
-                    }
-                    else if (empselection2.Equals("july"))
-                    {
-                        Console.WriteLine(july);
-                        Console.WriteLine("Press any key to exit.");
-                        Console.ReadKey();
-                    }
-                    else if (empselection2.Equals("jack"))
-                    {
-                        Console.WriteLine(jack);
-                        Console.WriteLine("Press any key to exit.");
-                        Console.ReadKey();
-                    }
-                    else
-                    {
-
-                        Console.WriteLine("Invalid input!");
-                        Console.WriteLine("Press any key to exit.");
-                        Console.ReadKey();
-                  
-                    }
-                }
-                if (empselection.Equals("b")) 
-                { Console.WriteLine(schedule); Console.WriteLine("Press any key to exit.");
-                    Console.ReadKey();
-                } else
+                if (UserInput1.Equals("A"))
                 {
-                    Console.WriteLine("Invalid input!");
+
+                    foreach (var title in EmployeesInfo) { Console.WriteLine($"Employees Info< {title}"); }
+
                     Console.WriteLine("Press any key to exit.");
                     Console.ReadKey();
                 }
+                else if (UserInput1.Equals("C"))
+                {
 
+                    foreach (var title in schedule) { Console.WriteLine($"Employees Schedule: {title}"); }
+                    Console.WriteLine("Press any key to exit.");
+                    Console.ReadKey();
 
+                }
+                else if (UserInput1.Equals("B"))
+                {
+                    Console.WriteLine(EmployeesInfo[0]);
+                    Console.WriteLine(JulianExercises[0]);
+                    Console.WriteLine(EmployeesInfo[1]);
+                    Console.WriteLine(JenniferExercises[1]);
+                    Console.WriteLine(EmployeesInfo[2]);
+                    Console.WriteLine(JoshExercises[0]);
+                    Console.WriteLine(EmployeesInfo[3]);
+                    Console.WriteLine(JulyExercises[0]);
+                    Console.WriteLine(EmployeesInfo[4]);
+                    Console.WriteLine(JackExercises[0]);
 
-            } else {
-                Console.WriteLine("Invalid Input!");
-                Console.WriteLine("Press any key to exit.");
-                Console.ReadKey();
+                    Console.WriteLine("Press any key to exit.");
+                    Console.ReadKey();
+
+                }
+
+                Console.WriteLine("Exiting The Employee Management System!");
+            }
+
+            static void ShowEmployeeMenu()
+            {
+                Console.WriteLine("----------------------------------------------------------");
+                Console.WriteLine("WELCOME EMPLOYEE! PLEASE PRESS ANY KEY OF THE FOLLOWING OPTIONS:");
+                Console.WriteLine(":");
+                foreach (var decription in EmployeeMenu)
+                {
+                    Console.WriteLine(decription);
+                }
+            }
+
+            static void ShowTrainerMenu()
+            {
+                Console.WriteLine("----------------------------------------------------------");
+                Console.WriteLine("WELCOME TRAINER PLEASE PRESS ANY KEY OF THE FOLLOWING OPTIONS:");
+                foreach (var decription in TrainerMenu)
+                {
+                    Console.WriteLine(decription);
+                }
             }
 
 
-           
         }
     }
 }
